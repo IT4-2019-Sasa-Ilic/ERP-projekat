@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "3f9ce5dd-574a-4adb-8132-d611104d6e35",
+		"name": "Proizvod",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get proizvodi w/o filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get proizvodi | pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/?pageNumber=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						""
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get proizvodi | filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/?sort=cena 1&rejting=3,4,5&kategorije=Elektricni skuteri,Elektricni bicikli&cena=500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						""
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "cena 1"
+						},
+						{
+							"key": "rejting",
+							"value": "3,4,5"
+						},
+						{
+							"key": "kategorije",
+							"value": "Elektricni skuteri,Elektricni bicikli"
+						},
+						{
+							"key": "cena",
+							"value": "500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get proizvodi | search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/search/Ducati Scrambler bicikl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"search",
+						"Ducati Scrambler bicikl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get proizvodi by kategorija",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/category/Elektricni skuteri",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"category",
+						"Elektricni skuteri"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get proizvod by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/product/6417148c7b4ae21fab1c934a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"product",
+						"6417148c7b4ae21fab1c934a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get proizvodi by admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5NjE0NTYsImV4cCI6MTY4MTU2NjI1Nn0.Fk-0VuzpEyM5H-NT05lgnzbTi8cg3Y10UksE0SqrqRY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post proizvod",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"naziv_proizvoda\": \"Testni proizvod\",\r\n    \"opis_proizvoda\": \"Neki opis\",\r\n    \"naziv_kategorije\": \"Elektricni skuteri\",\r\n    \"kolicina\": 5,\r\n    \"cena\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post proizvod | already exist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"naziv_proizvoda\": \"Testni proizvod\",\r\n    \"opis_proizvoda\": \"Neki opis\",\r\n    \"naziv_kategorije\": \"Elektricni skuteri\",\r\n    \"kolicina\": 5,\r\n    \"cena\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post proizvod | not admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmYiLCJpbWUiOiJOaWtvbGEiLCJwcmV6aW1lIjoiTmlrb2xpYyIsImVtYWlsIjoibmlrb2xhQGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODA5Njk0NjEsImV4cCI6MTY4MTU3NDI2MX0.IoopB8Q075D5WGvZxNKbYgjyFtXGzOlgP8wvRlkFvoc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"naziv_proizvoda\": \"Testni proizvod novi\",\r\n    \"opis_proizvoda\": \"Neki opis\",\r\n    \"naziv_kategorije\": \"Elektricni skuteri\",\r\n    \"kolicina\": 5,\r\n    \"cena\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update proizvod",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"kolicina\":25\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/admin/64318cb9e2cfa38fd08a1592",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin",
+						"64318cb9e2cfa38fd08a1592"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload photo for product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/C:/Users/doljn/Desktop/MIEP_project/Dataset/val/IMG_20230119_114624.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/admin/upload-image?id=64318cb9e2cfa38fd08a1592",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin",
+						"upload-image"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "64318cb9e2cfa38fd08a1592"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload photo for product | bad format",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/C:/Users/doljn/Downloads/Saša Ilić,IT4-2019_prezentacija_erp.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/admin/upload?id=64318cb9e2cfa38fd08a1592",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "64318cb9e2cfa38fd08a1592"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete  photo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/admin/image/C%3A%5CUsers%5Cdoljn%5CDesktop%5Cbackend%5Cimages%5Cproducts%2FIMG_20230119_114624.jpg/64318cb9e2cfa38fd08a1592",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin",
+						"image",
+						"C%3A%5CUsers%5Cdoljn%5CDesktop%5Cbackend%5Cimages%5Cproducts%2FIMG_20230119_114624.jpg",
+						"64318cb9e2cfa38fd08a1592"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete proizvod",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/admin/64318cb9e2cfa38fd08a1592",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin",
+						"64318cb9e2cfa38fd08a1592"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

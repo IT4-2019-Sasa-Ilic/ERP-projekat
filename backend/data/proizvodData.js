@@ -1,0 +1,73 @@
+const ObjectId = require("mongodb").ObjectId
+
+const proizvodi = [
+    {
+    naziv_proizvoda: "DUCATI Električni bicikl Scrambler SCR-E",
+    opis_proizvoda:"SCR-E je Ducati Scrambler bicikl sa pedalom. Debeli točkovi 20” k 4” omogućavaju vozačima da putuju sa punim prianjanjem čak i na neravnim ili van-putevima. Baterija od 374,4 Vh je potpuno integrisana u okvir i, kada je potpuno napunjena, garantuje autonomiju do 70 km.",
+    kolicina: 5,
+    cena: 100,
+    kategorija_id: ObjectId("640cfd400b0663a3f2f39127"),
+    slike: [],
+    prosecna_ocena: 5,
+    broj_recenzija: 1,
+    broj_prodaja:10,
+  },
+  {
+    naziv_proizvoda: "MOYE Yugo Električni bicikl Tempo",
+    opis_proizvoda:"Dizajniran kao gradski bicikl koji je lagan, jednostavan, efikasan i moderan. Ovaj E- bike pokreće motor snage 240W u zadnjem točku. Ram je izradjen od aluminijuma, sto mu bitno smanjuje tezinu u odnosu na klasične bicikle izradjene od legura gvozdja. Maksimalna brzina je 25 km/h, uz domet od oko 45km.",
+    kolicina: 5,
+    cena: 100,
+    kategorija_id: ObjectId("640cfd400b0663a3f2f39127"),
+    slike: [],
+    prosecna_ocena: 5,
+    broj_recenzija: 0,
+    broj_prodaja:12,
+  },
+   {
+    naziv_proizvoda: "Xplorer Električni trotinet S6 10",
+    opis_proizvoda:"Električni trotinet S6 10 brenda Xplorer, izdvaja se od konkurencije kako po samom kvalitetu izrade, tako i po specifikacijama kao što su - Honeycomb gume .",
+    kolicina: 20,
+    cena: 400,
+    kategorija_id: ObjectId("640cfd400b0663a3f2f39129"),
+    slike: [],
+    prosecna_ocena: 4,
+    broj_recenzija: 2,
+    broj_prodaja:3,
+  },
+  {
+    naziv_proizvoda: "Motogrini E:MOTION L3 – Električni skuter",
+    opis_proizvoda:"Motogrini e:motion 2048 L3 je top model e:motion tipa Motogrini električnih skutera. Već prepoznatljivog dizajna, udoban za vožnju, ovaj gradski skuter donosi niz tehnoloških noviteta.",
+    kolicina: 25,
+    cena: 500,
+    kategorija_id: ObjectId("640cfd400b0663a3f2f39128"),
+    slike: [],
+    prosecna_ocena: 3,
+    broj_recenzija: 0,
+    broj_prodaja:0,
+  },
+  {
+    naziv_proizvoda: "Motogrini E:GO Električni skuter",
+    opis_proizvoda:
+      "Motogrini e:go je predstavnik nove generacije urbanog transporta. Upečatljivog dizajna i specifične geometrije, e:go osvaja na prvi pogled.Iako malih dimenzija, ovaj moderni gradski dvotočkaš ima maksimalnu brzinu 20/40kmh i realan domet do 40km kombinovane vožnje u gradskim uslovima.",
+    kolicina: 5,
+    cena: 100,
+    kategorija_id: ObjectId("640cfd400b0663a3f2f39128"),
+    slike: [],
+    prosecna_ocena: 5,
+    broj_recenzija: 2,
+    broj_prodaja:4,
+  },
+  {
+    naziv_proizvoda: "RAZOR ELEKTRIČNI SKATEBOARD LONGBOARD",
+    opis_proizvoda:"Maksimalna brzina: 16 km/h,Autonomija baterije: do 40 min.Starosno doba: 9+ godina,Nosivost: Do 100 kg.",
+    kolicina: 10,
+    cena: 200,
+    kategorija_id: ObjectId("640cfd400b0663a3f2f3912a"),
+    slike: [],
+    prosecna_ocena: 5,
+    broj_recenzija: 1,
+    broj_prodaja:52,
+  },
+]
+
+module.exports = proizvodi

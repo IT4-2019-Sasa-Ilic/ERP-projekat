@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "688a4ba8-1094-4243-b0d3-5a175dc38046",
+		"name": "Kategorija",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get kategorije",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get kategorija by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/categories/640cfd400b0663a3f2f39127",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"640cfd400b0663a3f2f39127"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get kategorija by id | Not logged",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmQiLCJpbWUiOiJNYXJrb25pIiwicHJlemltZSI6Ik1hcmtvdmnEhyIsImVtYWlsIjoibWFya29AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgwOTU1MjI0LCJleHAiOjE2ODE1NjAwMjR9.3wmRe1d8F_dm7A6TMWWgrdu3T8Z8MXg9H0WjDBpTQ-M  ",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/categories/640cfd400b0663a3f2f39127",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"640cfd400b0663a3f2f39127"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get kategorija by id | Bad request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/categories/640cfd400b0663a3f2f39121",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"640cfd400b0663a3f2f39121"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post kategorija",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"naziv_kategorije\": \"Nesto novo\",\r\n     \"opis_kategorije\": \"Neka nova kategorija\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post kategorija | not admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmYiLCJpbWUiOiJOaWtvbGEiLCJwcmV6aW1lIjoiTmlrb2xpYyIsImVtYWlsIjoibmlrb2xhQGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2ODA5NTk3MzYsImV4cCI6MTY4MTU2NDUzNn0.pD8kYbntmOVo3ctm1zy5tLsXotDDSCgpRGetVslPe-c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"naziv_kategorije\": \"Nesto novo\",\r\n     \"opis_kategorije\": \"Neka nova kategorija\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post kategorija | already exists",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"naziv_kategorije\": \"Nesto novo\",\r\n     \"opis_kategorije\": \"Neka nova kategorija\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update kategorija",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"naziv_kategorije\": \"Nesto novo update\",\r\n     \"opis_kategorije\": \"Neka nova kategorija update\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/categories/6431686cb28b56f4002bb106",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"6431686cb28b56f4002bb106"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete kategorija",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/categories/6431686cb28b56f4002bb106",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"6431686cb28b56f4002bb106"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

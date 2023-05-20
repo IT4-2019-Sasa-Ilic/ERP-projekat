@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "67c09bfc-d013-411c-b8f4-301dee6538cc",
+		"name": "Recenzija",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get recenzije by proizvod",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/reviews/product/6417148c7b4ae21fab1c934a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews",
+						"product",
+						"6417148c7b4ae21fab1c934a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get recenzije by korisnik",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/reviews/user/640cfd400b0663a3f2f3912d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews",
+						"user",
+						"640cfd400b0663a3f2f3912d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get recenzija by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/reviews/6419be4ab72d5a5bb0316d38",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews",
+						"6419be4ab72d5a5bb0316d38"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post recenzija",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"opis_recenzije\": \"odlicno\",\r\n     \"ocena\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/reviews/product/6417148c7b4ae21fab1c934a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews",
+						"product",
+						"6417148c7b4ae21fab1c934a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post recenzija | already reviewed by user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"opis_recenzije\": \"odlicno\",\r\n     \"ocena\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/reviews/product/6417148c7b4ae21fab1c934a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews",
+						"product",
+						"6417148c7b4ae21fab1c934a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update recenzija",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ocena\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/reviews/64317f5c8904c65125aff613",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews",
+						"64317f5c8904c65125aff613"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update recenzija | bad request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/reviews/6419be4ab72d5a5bb0316d38",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews",
+						"6419be4ab72d5a5bb0316d38"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete recenzija",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/reviews/64317f5c8904c65125aff613",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reviews",
+						"64317f5c8904c65125aff613"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

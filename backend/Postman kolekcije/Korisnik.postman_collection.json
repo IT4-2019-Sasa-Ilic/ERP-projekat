@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "1dd8d167-3983-4d0c-8b35-f61eaa9cb5d4",
+		"name": "Korisnik",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register korisnik",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {   \r\n        \"ime\": \"Aleksa\",\r\n        \"prezime\": \"Avramovic\",\r\n        \"email\": \"aleksaaa@gmail.com\",\r\n        \"lozinka\":\"lozinka\",\r\n        \"broj_telefona\":\"065233665\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register korisnik | bad request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {      \"ime\": \"Aleksa\",\r\n        \"lozinka\":\"lozinka\",\r\n        \"broj_telefona\":\"065233665\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ilic.sasa2001@gmail.com\",\r\n    \"lozinka\":\"lic.sasa2001@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login | bad password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ilic.sasa2001@gmail.com\",\r\n    \"lozinka\":\"nesipravnalozinka\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login | bad email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ovajemailnepostoji@gmail.com\",\r\n    \"lozinka\":\"nesipravnalozinka\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5NjE0NTYsImV4cCI6MTY4MTU2NjI1Nn0.Fk-0VuzpEyM5H-NT05lgnzbTi8cg3Y10UksE0SqrqRY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get korisnici | admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5NTk1MTQsImV4cCI6MTY4MTU2NDMxNH0.hU9MaDRobyR-2PmdX4HXCPrzERsUIO1XOSJCfCuW988",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get korisnik by id | admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/640cfd400b0663a3f2f3912d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"640cfd400b0663a3f2f3912d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get my profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmQiLCJpbWUiOiJNYXJrb25pIiwicHJlemltZSI6Ik1hcmtvdmnEhyIsImVtYWlsIjoibWFya29AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgwOTY5MDMyLCJleHAiOjE2ODE1NzM4MzJ9.8GOaQXljqp2bYD0hDwy_GnRQ7hnjzmOu-PtMa_UISx8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/profile/640cfd400b0663a3f2f3912d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"640cfd400b0663a3f2f3912d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get my profile | bad request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5NjE0NTYsImV4cCI6MTY4MTU2NjI1Nn0.Fk-0VuzpEyM5H-NT05lgnzbTi8cg3Y10UksE0SqrqRY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/profile/640cfd400b0663a3f2f3912d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"640cfd400b0663a3f2f3912d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update my profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"broj_telefona\":\"0613584125\",\r\n    \"lozinka\":\"lic.sasa2001@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update korisnik | admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isAdmin\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/640cfd400b0663a3f2f3912d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"640cfd400b0663a3f2f3912d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete korisnik",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/6418bf8bc86c9ad5df8398f2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"6418bf8bc86c9ad5df8398f2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete korisnik | not exists",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/6418bfe8e7147ad6371aef4c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"6418bfe8e7147ad6371aef4c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "77f7bfa3-8a67-48c5-9b1c-7b9a4d209faa",
+		"name": "Porudzbina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get porudzbine | korisnik",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get porudzbine | admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/orders/all/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						"all",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get porudzbina by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/orders/640cfd400b0663a3f2f3913e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						"640cfd400b0663a3f2f3913e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post porudzbina",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"stavkePorudzbine\": [\r\n        {\r\n            \"proizvod_id\": \"6417148c7b4ae21fab1c934a\",\r\n            \"naziv_proizvoda\": \"Motogrini E:GO Električni skuter\",\r\n            \"kolicina\": 1,\r\n            \"cena\": 1000\r\n        },\r\n        {\r\n            \"proizvod_id\": \"6417148c7b4ae21fab1c934e\",\r\n            \"naziv_proizvoda\": \"Xplorer Električni trotinet S6 10\",\r\n            \"kolicina\": 1,\r\n            \"cena\": 3400\r\n        }\r\n    ],\r\n    \"nacin_placanja\":\"Stripe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update porudzbina | isporucena",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/orders/delivered/6432bafeca2f4ca62ce0ef5d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						"delivered",
+						"6432bafeca2f4ca62ce0ef5d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update porudzbina | placena",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/orders/delivered/6432bafeca2f4ca62ce0ef5d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						"delivered",
+						"6432bafeca2f4ca62ce0ef5d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete porudbzina",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDBjZmQ0MDBiMDY2M2EzZjJmMzkxMmMiLCJpbWUiOiJTYcWhYSIsInByZXppbWUiOiJJbGnEhyIsImVtYWlsIjoiaWxpYy5zYXNhMjAwMUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODA5Njk1MjIsImV4cCI6MTY4MTU3NDMyMn0.n5TvTvB07YgvGsOdYHi8xbGm2DTJ64DFUlE9eoYyyvc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/orders/6432ba74ca2f4ca62ce0ef49",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orders",
+						"6432ba74ca2f4ca62ce0ef49"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
